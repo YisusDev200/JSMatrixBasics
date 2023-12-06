@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operaciones Matriciales JS</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .title-index {
+        background-color: #0d0d0d;
+      }
+      .body-index {
+        background-color: #404040;
+        padding: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="navbar navbar-expand-lg navbar-dark title-index">
+      <div class="d-flex justify-content-center align-items-center w-100">
+        <a href="./" class="navbar-brand mx-auto">
+          <h3>Matrix Operations in JS</h3>
+        </a>
+      </div>
+    </div>
+
+    <div class="container mt-5 body-index">
+      <div class="row">
+        <!-- *MATRIZ A -->
+        <div class="col-sm text-center m-2">
+          <h5 class="text-center">Matrix A</h5>
+          <div class="insert-table-matrix">
+            <div class="form-row">
+              <div class="col">
+                <input
+                  class="form-control text-center input"
+                  placeholder="rows"
+                  id="rowDim1"
+                  type="number"
+                />
+              </div>
+              x
+              <div class="col">
+                <input
+                  class="form-control text-center input"
+                  placeholder="columns"
+                  id="columnsDim1"
+                  type="number"
+                />
+              </div>
+            </div>
+            <div class="error" id="sizeError1"></div>
+            <!-- --------- -->
+            <button class="shadow__btn" onclick="onGenerateClick(1)">
+              Crear Matriz
+            </button>
+            <table class="table table-bordered table-condensed">
+              <tbody id="tableBody1"></tbody>
+            </table>
+            <div class="error" id="inputError1"></div>
+          </div>
+        </div>
+
+        <!-- *Btn's Operaciones -->
+        <div class="col-sm text-center mb-4">
+          <div class="btn-group-vertical align-content-center">
+            <!-- *Operaciones basicas -->
+
+            <!-- ------------------ -->
+            <button class="btn-17" onclick="onCalculateClick('Add')">
+              <span class="text-container">
+                A<span class="operator">+</span>B
+              </span>
+            </button>
+
+            <!-- ----------------- -->
+
+            <!-- ------------------ -->
+            <button class="btn-17" onclick="onCalculateClick('Subtract')">
+              <span class="text-container">
+                A<span class="operator">-</span>B
+              </span>
+            </button>
+
+            <!-- ----------------- -->
+
+            <!-- ------------------ -->
+            <button class="btn-17" onclick="onCalculateClick('Multiplication')">
+              <span class="text-container">
+                A<span class="operator">×</span>B
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <!-- *MATRIZ B -->
+        <div class="col-sm text-center m-2">
+          <h5 class="text-center">Matrix B</h5>
+          <div class="insert-table-matrix">
+            <div class="form-row">
+              <div class="col">
+                <input
+                  class="form-control text-center input"
+                  placeholder="rows"
+                  id="rowDim2"
+                  type="number"
+                />
+              </div>
+              x
+              <div class="col">
+                <input
+                  class="form-control text-center input"
+                  placeholder="columns"
+                  id="columnsDim2"
+                  type="number"
+                />
+              </div>
+            </div>
+            <div class="error" id="sizeError2"></div>
+            <!-- --------- -->
+            <button class="shadow__btn" onclick="onGenerateClick(2)">
+              Crear Matriz
+            </button>
+            <table class="table table-bordered table-condensed">
+              <tbody id="tableBody2"></tbody>
+            </table>
+            <div class="error" id="inputError2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="error" id="inputError3"></div>
+
+    <style>
+      .outputContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #output {
+        margin-top: 20px;
+        width: 500px;
+        overflow: auto;
+      }
+    </style>
+    <div class="outputContainer">
+      <em>Answer </em>
+      <div id="output"></div>
+    </div>
+
+    <script src="js/create-matrix.js"></script>
+    <script src="js/basic-operations.js"></script>
+    <script src="js/calculate-driver.js"></script>
+    <script src="js/fraction.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
