@@ -8,6 +8,8 @@ Este proyecto proporciona una serie de funciones para realizar operaciones bási
 ## Clona este repositorio en tu máquina local: 
 `git clone https://github.com/yisusAbet24/JSMatrixBasics.git`
 
+
+![Texto alternativo](img-readme/img-2.png)
 ![Texto alternativo](img-readme/img-1.png)
 
 # Inicio Rápido:
